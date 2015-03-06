@@ -49,10 +49,11 @@ column.names <- gsub('-meanFreq\\(\\)', ' Mean Freq', column.names)
 column.names <- gsub('tBody', 'Time Body', column.names) 
 column.names <- gsub('tGravity', 'Time Gravity', column.names) 
 column.names <- gsub('fBody', 'Frequency Body', column.names)
-names(all.mean.std.data) <- column.names  # write back the new columns name.
+
+names(all.mean.std.data) <- column.names  # write back the new columns name to all.mean.std.data.
 
 # [Assignment step 5]
-# From the data set in step 4, creates a second, independent tidy data set with the 
+# From the data set in step 4, create a second, independent tidy data set with the 
 # average of each variable for each activity and each subject.
 melted.data <- melt(all.mean.std.data, id=c("subject.id","activity.labels"))
 tidy.data <- dcast(melted.data, subject.id + activity.labels ~ variable, mean)
