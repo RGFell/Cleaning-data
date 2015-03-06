@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.RDataTmp
+Cleaning-data.Rproj
+UCI_HAR_Dataset/
+.txt
