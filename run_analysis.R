@@ -56,7 +56,9 @@ names(all.mean.std.data) <- column.names  # write back the new columns name to a
 # From the data set in step 4, create a second, independent tidy data set with the 
 # average of each variable for each activity and each subject.
 melted.data <- melt(all.mean.std.data, id=c("subject.id","activity.labels"))
-tidy.data <- dcast(melted.data, subject.id + activity.labels ~ variable, mean)
+tidy.data <- dcast(melted.data, subject.id + activity.labels ~ variable, mean)  # recast the melted data into a mean of each vairable.
+
+# Write the new tiday data to a file.
 write.table(tidy.data, "tidy.data.txt", sep=",", row.names = FALSE)  # Write the tidy data to a txt file.
 
 
