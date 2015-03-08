@@ -2,7 +2,7 @@
 
 ## Introduction
 
-TODO
+This reposistory contains files for the implentation of the Coursera Class [Getting and Cleaning Data](https://www.coursera.org/course/getdata 'Coursera: Getting and Cleaning Data').
 
 
 ### Files In Repository
