@@ -2,9 +2,8 @@
 
 ## Introduction
 
-### Project Environment
+TODO
 
-This script was written using R version 3.1.2 (2014-10-31) ("Pumpkin Helmet")
 
 ### Files In Repository
 
@@ -75,7 +74,13 @@ The script generates a text file called `tidy.data.txt` that will contains a tid
 
 The code book for this project is located at this [URL](https://github.com/dvd940/Cleaning-data/blob/master/CodeBook.md "Code Book"). 
 
-## Script Details
+## Other Details
+
+### Project Environment
+
+This script was written using R version 3.1.2 (2014-10-31) ("Pumpkin Helmet")
+
+### Script Details
 
 The `run_analysis.R` script performs the following actions:-
 
@@ -83,5 +88,5 @@ The `run_analysis.R` script performs the following actions:-
 2. Combine the training and test sets into a single dataset using the `cbind` and `rbind` functions. [Assignment step 1]
 3. Keep only the subject.id, activity and any column that contains a mean or standard deviation. **Note:** For mean, any varaible name that is a mean is included. This means that `meanFreq` data is also kept. [Assignment step 2]
 4. The activty values are replaced with descriptive names. [Assignment step 3]
-5. The variable names are changed to descriptive labels. **Note: ** Some terms such as 'AccJerk' are not modified. [Assignment step 4]
+5. The variable names are changed to descriptive labels. **Note:** Some terms such as 'AccJerk' are not modified. [Assignment step 4]
 6. The data is melted and recast into a data set showing the average of each variable for each activity and each subject. The data is then outputted to a text file. [Assignement step 5]
