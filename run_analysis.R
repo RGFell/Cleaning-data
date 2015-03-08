@@ -3,12 +3,12 @@ library('data.table')
 library('reshape2')
 
 # Read in training and test sets.
-X.train.set <- read.table('UCI_HAR_Dataset//train//X_train.txt')
-Y.train.set <- read.table('UCI_HAR_Dataset//train//y_train.txt')
-subject.train.set <- read.table('UCI_HAR_Dataset//train//subject_train.txt')
-X.test.set <- read.table('UCI_HAR_Dataset//test//X_test.txt')
-Y.test.set <- read.table('UCI_HAR_Dataset//test//y_test.txt')
-subject.test.set <- read.table('UCI_HAR_Dataset//test//subject_test.txt')
+X.train.set <- read.table('UCI HAR Dataset//train//X_train.txt')
+Y.train.set <- read.table('UCI HAR Dataset//train//y_train.txt')
+subject.train.set <- read.table('UCI HAR Dataset//train//subject_train.txt')
+X.test.set <- read.table('UCI HAR Dataset//test//X_test.txt')
+Y.test.set <- read.table('UCI HAR Dataset//test//y_test.txt')
+subject.test.set <- read.table('UCI HAR Dataset//test//subject_test.txt')
 
 # [Assignment step 1] 
 # Combine training and test sets into one data set using cbind and rbind. 
@@ -20,7 +20,7 @@ all.data <- rbind(all.train.data, all.test.data)
 # Extract only the measurements on the mean and standard deviation for each measurement.
 
 # Step 2.1 First, update column names
-feature.names <- read.table('UCI_HAR_Dataset//features.txt', stringsAsFactors = FALSE ) 
+feature.names <- read.table('UCI HAR Dataset//features.txt', stringsAsFactors = FALSE ) 
 column.names <- c('subject.id', 'activity', feature.names[, 2]) # feature names data is in second column
 
 names(all.data) <- column.names # Update the column names
@@ -32,7 +32,7 @@ all.mean.std.data <- all.data[, keep.columns]
 
 # [Assignment step 3] 
 # Use descriptive activity names to name the activities in the data set 
-activity.labels <- read.table('UCI_HAR_Dataset//activity_labels.txt')[, 2] # activity data is in second column
+activity.labels <- read.table('UCI HAR Dataset//activity_labels.txt')[, 2] # activity data is in second column
 all.mean.std.data[, 2] = activity.labels[all.mean.std.data[, 2]]  # Replace column 2 (activity) based on the activity label values
 
 
