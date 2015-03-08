@@ -34,7 +34,7 @@ For information on the contents of the raw data files, review the included [Code
 
 ### Unused Data
 
-The data in the 'UCI HAR Dataset\test\Inertial Signals'and 'UCI HAR Dataset\train\Inertial Signals' directories are not used in this implementation. 
+The data in the 'UCI HAR Dataset\\test\\Inertial Signals'and 'UCI HAR Dataset\\train\\Inertial Signals' directories are not used in this implementation. 
 
 ## Script Usage
 
