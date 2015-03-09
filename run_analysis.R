@@ -41,23 +41,28 @@ all.mean.std.data[, 2] = activity.labels[all.mean.std.data[, 2]]  # Replace colu
 column.names <- colnames(all.mean.std.data) # Get all of our current variable names.
 
 # Use regular expressions to make the variable names more descriptive.
-column.names <- gsub('-mean\\(\\)-', ' Mean ', column.names)
-column.names <- gsub('-mean\\(\\)', ' Mean', column.names)
-column.names <- gsub('-std\\(\\)-', ' Standard Deviation ', column.names)
-column.names <- gsub('-std\\(\\)', ' Standard Deviation', column.names)
-column.names <- gsub('-meanFreq\\(\\)-', ' Mean Freq ', column.names)
-column.names <- gsub('-meanFreq\\(\\)', ' Mean Freq', column.names)
-column.names <- gsub('tBody', 'Time Body', column.names) 
-column.names <- gsub('tGravity', 'Time Gravity', column.names) 
-column.names <- gsub('fBody', 'Frequency Body', column.names)
+column.names <- gsub('subject.id', 'SubjectID', column.names)
+column.names <- gsub('activity', 'Activity', column.names)
+column.names <- gsub('\\(\\)', '', column.names)
+column.names <- gsub('^t', 'TimeDomain', column.names) 
+column.names <- gsub('Freq', 'Frequency', column.names)
+column.names <- gsub('^f', 'FrequencyDomain', column.names)
+column.names <- gsub('-X', 'XAxis', column.names)
+column.names <- gsub('-Y', 'YAxis', column.names)
+column.names <- gsub('-Z', 'ZAxis', column.names)
+column.names <- gsub('-mean', 'Mean', column.names)
+column.names <- gsub('-std', 'StandardDeviation', column.names)
+column.names <- gsub('Acc', 'Acceleration', column.names)
+column.names <- gsub('Gyro', 'Gyroscope', column.names)
+column.names <- gsub('Mag', 'Magnitude', column.names)
 
 names(all.mean.std.data) <- column.names  # write back the new columns name to all.mean.std.data.
 
 # [Assignment step 5]
 # From the data set in step 4, create a second, independent tidy data set with the 
 # average of each variable for each activity and each subject.
-melted.data <- melt(all.mean.std.data, id=c('subject.id','activity')) #Melt data into DF of activity and sbject.
-tidy.data <- dcast(melted.data, subject.id + activity ~ variable, mean)  # recast the melted data into a mean of each vairable.
+melted.data <- melt(all.mean.std.data, id=c('SubjectID','Activity')) #Melt data into DF of activity and sbject.
+tidy.data <- dcast(melted.data, SubjectID + Activity ~ variable, mean)  # recast the melted data into a mean of each vairable.
 
 # Write the new tiday data to a file.
 write.table(tidy.data, 'tidy.data.txt', sep=',', row.names = FALSE)  # Write the tidy data to a txt file.
