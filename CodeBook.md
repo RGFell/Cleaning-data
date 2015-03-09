@@ -13,20 +13,39 @@ The followings files are utilized in this project:-
 
 * `activity_labels.txt` - Contains the activity labels with their corresponding activity name.
 * `features.txt` - Contains a list of all features.
-* `test\\subject_test.txt`- Subject ID for each observation in 'X_test.txt'. 
-* `test\\X_test.txt` - The test set of observations. 
-* `test\\y_test.txt`- The test set labels.
-* `train\\subject_train.txt`- Subject ID for each observation in 'X_train.txt'.
-* `train\\X_train.txt` - The training set of observations. 
-* `train\\y_train.txt` - The test set labels.
+* `test\subject_test.txt`- Subject ID for each observation in 'X_test.txt'. 
+* `test\X_test.txt` - The test set of observations. 
+* `test\y_test.txt`- The test set labels.
+* `train\subject_train.txt`- Subject ID for each observation in 'X_train.txt'.
+* `train\X_train.txt` - The training set of observations. 
+* `train\y_train.txt` - The test set labels.
 
 **Note:** The data contained with the train\\Inertial Signals and train\\Inertial Signals folders were not used for this Coursera project implementation. 
 
 **Note:** For the prupose of this Coursera project, the test and train data were combined into a single date set.
 
+## Tidy Data File
+
+The script `run_analysis.R` outputs a file called `tidy.data.txt`. This file contains the average for each variable for each activity and each subject.
+
+Only variables that record the mean and standard deviation are outputted to the file. All other variables are dropped from the output data set. 
+
+### Variable Name Modifications 
+
+The outputted file modifies the variable names as follows to make them more descriptive:-
+
+* 'mean()' is replaced with 'Mean'
+* 'std()' is repalced with 'Standard Deviation'
+* 'meanFreq' is replaced with 'Mean Freq'
+* 'tBody' is replaced with 'Time Body' 
+* 'tGravity' is replaced with 'Time Gravity' 
+* 'fBody' is replaced with 'Frequency Body'
+
+
+
 ## Feature Selection 
 
-_The following is taken from the 'features_info.txt' file that accompanies the data set._
+_The following is taken from the 'features_info.txt' file that accompanies the data set and exaplains the origin and method for colecting the original data set._
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
