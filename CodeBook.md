@@ -22,7 +22,7 @@ The followings files are utilized in this project:-
 
 **Note:** The data contained with the train\\Inertial Signals and train\\Inertial Signals folders were not used for this Coursera project implementation. 
 
-**Note:** For the prupose of this Coursera project, the test and train data were combined into a single date set.
+**Note:** For the purpose of this Coursera project, the test and train data were combined into a single date set.
 
 ## Tidy Data File
 
@@ -35,7 +35,7 @@ Only variables that record the mean and standard deviation are outputted to the 
 The outputted file modifies the variable names as follows to make them more descriptive:-
 
 * 'mean()' is replaced with 'Mean'
-* 'std()' is repalced with 'Standard Deviation'
+* 'std()' is replaced with 'Standard Deviation'
 * 'meanFreq' is replaced with 'Mean Freq'
 * 'tBody' is replaced with 'Time Body' 
 * 'tGravity' is replaced with 'Time Gravity' 
@@ -45,7 +45,7 @@ The outputted file modifies the variable names as follows to make them more desc
 
 ## Feature Selection 
 
-_The following is taken from the 'features_info.txt' file that accompanies the data set and exaplains the origin and method for colecting the original data set._
+_The following is taken from the 'features_info.txt' file that accompanies the data set and explains the origin and method for collecting the original data set._
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
