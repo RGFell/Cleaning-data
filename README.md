@@ -94,12 +94,11 @@ The `run_analysis.R` script performs the following actions:-
 
 ### Descriptive Variable Names
 
-The outputted file modifies the variable names as follows to make them more descriptive:-
+The outputted file modifies the variable names to make them more descriptive as follows:-
 
-* 'mean()' is replaced with 'Mean'
-* 'std()' is replaced with 'Standard Deviation'
-* 'meanFreq' is replaced with 'Mean Freq'
-* 'tBody' is replaced with 'Time Body' 
-* 'tGravity' is replaced with 'Time Gravity' 
-* 'fBody' is replaced with 'Frequency Body'
-
+* Names starting with 't' are preceeded by 'TimeDomain'.
+* Names starting with 'f' are preceeded by 'FrequencyDomain'.
+* 'std' is replaced with 'Standard Deviation'.
+* 'Acc' is replaced with 'Acceleration'.
+* 'Gyro' is replaced with 'Gyroscope'.
+* 'Mag' is replaced with 'Magnitude'.
