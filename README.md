@@ -74,6 +74,7 @@ The script generates a text file called `tidy.data.txt` that will contains a tid
 
 The code book for this project is located at this [URL](https://github.com/dvd940/Cleaning-data/blob/master/CodeBook.md "Code Book"). 
 
+
 ## Other Details
 
 ### Project Environment
@@ -90,3 +91,15 @@ The `run_analysis.R` script performs the following actions:-
 4. The activty values are replaced with descriptive names. [Assignment step 3]
 5. The variable names are changed to descriptive labels. **Note:** Some terms such as 'AccJerk' are not modified. [Assignment step 4]
 6. The data is melted and recast into a data set showing the average of each variable for each activity and each subject. The data is then outputted to a text file. [Assignement step 5]
+
+### Descriptive Variable Names
+
+The outputted file modifies the variable names as follows to make them more descriptive:-
+
+* 'mean()' is replaced with 'Mean'
+* 'std()' is replaced with 'Standard Deviation'
+* 'meanFreq' is replaced with 'Mean Freq'
+* 'tBody' is replaced with 'Time Body' 
+* 'tGravity' is replaced with 'Time Gravity' 
+* 'fBody' is replaced with 'Frequency Body'
+
