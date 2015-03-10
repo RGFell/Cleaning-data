@@ -26,23 +26,102 @@ The followings files are utilized in this project:-
 
 ## Tidy Data File
 
-The script `run_analysis.R` outputs a file called `tidy.data.txt`. 
+* The script `run_analysis.R` outputs a file called `tidy.data.txt`. 
+* The file is organized by subject ID and then by each activity for that subject.
+* Each row in the outputted file contains the average of the readings for each activity and each subject.
+* Only variables that record the mean and standard deviation are outputted to the file. All other variables are dropped from the output data set.
 
-Each row in the outputted file contains the average of the readings for each activity and each subject.
+### List of Variables
 
-**Note:** Only variables that record the mean and standard deviation are outputted to the file. All other variables are dropped from the output data set.
+**Note:** In the following variables, XAxis, YAxis and ZAxis denote 3-axis signals in the X, Y, and Z directions. 
 
+*   SubjectID
+* 	Activity
 
-### Variable Name Modifications 
+#### Time Domain Variables
 
-The outputted file modifies the variable names to make them more descriptive as follows:-
+*   TimeDomainBodyAccelerationMeanXAxis
+* 	TimeDomainBodyAccelerationMeanYAxis
+* 	TimeDomainBodyAccelerationMeanZAxis
+* 	TimeDomainBodyAccelerationStandardDeviationXAxis
+* 	TimeDomainBodyAccelerationStandardDeviationYAxis
+* 	TimeDomainBodyAccelerationStandardDeviationZAxis
+* 	TimeDomainGravityAccelerationMeanXAxis
+* 	TimeDomainGravityAccelerationMeanYAxis
+* 	TimeDomainGravityAccelerationMeanZAxis
+* 	TimeDomainGravityAccelerationStandardDeviationXAxis
+* 	TimeDomainGravityAccelerationStandardDeviationYAxis
+* 	TimeDomainGravityAccelerationStandardDeviationZAxis
+* 	TimeDomainBodyAccelerationJerkMeanXAxis
+* 	TimeDomainBodyAccelerationJerkMeanYAxis
+* 	TimeDomainBodyAccelerationJerkMeanZAxis
+* 	TimeDomainBodyAccelerationJerkStandardDeviationXAxis
+* 	TimeDomainBodyAccelerationJerkStandardDeviationYAxis
+* 	TimeDomainBodyAccelerationJerkStandardDeviationZAxis
+* 	TimeDomainBodyGyroscopeMeanXAxis
+* 	TimeDomainBodyGyroscopeMeanYAxis
+* 	TimeDomainBodyGyroscopeMeanZAxis
+* 	TimeDomainBodyGyroscopeStandardDeviationXAxis
+* 	TimeDomainBodyGyroscopeStandardDeviationYAxis
+* 	TimeDomainBodyGyroscopeStandardDeviationZAxis
+* 	TimeDomainBodyGyroscopeJerkMeanXAxis
+* 	TimeDomainBodyGyroscopeJerkMeanYAxis
+* 	TimeDomainBodyGyroscopeJerkMeanZAxis
+* 	TimeDomainBodyGyroscopeJerkStandardDeviationXAxis
+* 	TimeDomainBodyGyroscopeJerkStandardDeviationYAxis
+* 	TimeDomainBodyGyroscopeJerkStandardDeviationZAxis
+* 	TimeDomainBodyAccelerationMagnitudeMean
+* 	TimeDomainBodyAccelerationMagnitudeStandardDeviation
+* 	TimeDomainGravityAccelerationMagnitudeMean
+* 	TimeDomainGravityAccelerationMagnitudeStandardDeviation
+* 	TimeDomainBodyAccelerationJerkMagnitudeMean
+* 	TimeDomainBodyAccelerationJerkMagnitudeStandardDeviation
+* 	TimeDomainBodyGyroscopeMagnitudeMean
+* 	TimeDomainBodyGyroscopeMagnitudeStandardDeviation
+* 	TimeDomainBodyGyroscopeJerkMagnitudeMean
+* 	TimeDomainBodyGyroscopeJerkMagnitudeStandardDeviation
 
-* Names starting with 't' are preceeded by 'TimeDomain'.
-* Names starting with 'f' are preceeded by 'FrequencyDomain'.
-* 'std' is replaced with 'Standard Deviation'.
-* 'Acc' is replaced with 'Acceleration'.
-* 'Gyro' is replaced with 'Gyroscope'.
-* 'Mag' is replaced with 'Magnitude'.
+#### Frequency Domain Variables
+
+* 	FrequencyDomainBodyAccelerationMeanXAxis
+* 	FrequencyDomainBodyAccelerationMeanYAxis
+* 	FrequencyDomainBodyAccelerationMeanZAxis
+* 	FrequencyDomainBodyAccelerationStandardDeviationXAxis
+* 	FrequencyDomainBodyAccelerationStandardDeviationYAxis
+* 	FrequencyDomainBodyAccelerationStandardDeviationZAxis
+* 	FrequencyDomainBodyAccelerationMeanFrequencyXAxis
+* 	FrequencyDomainBodyAccelerationMeanFrequencyYAxis
+* 	FrequencyDomainBodyAccelerationMeanFrequencyZAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanXAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanYAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanZAxis
+* 	FrequencyDomainBodyAccelerationJerkStandardDeviationXAxis
+* 	FrequencyDomainBodyAccelerationJerkStandardDeviationYAxis
+* 	FrequencyDomainBodyAccelerationJerkStandardDeviationZAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanFrequencyXAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanFrequencyYAxis
+* 	FrequencyDomainBodyAccelerationJerkMeanFrequencyZAxis
+* 	FrequencyDomainBodyGyroscopeMeanXAxis
+* 	FrequencyDomainBodyGyroscopeMeanYAxis
+* 	FrequencyDomainBodyGyroscopeMeanZAxis
+* 	FrequencyDomainBodyGyroscopeStandardDeviationXAxis
+* 	FrequencyDomainBodyGyroscopeStandardDeviationYAxis
+* 	FrequencyDomainBodyGyroscopeStandardDeviationZAxis
+* 	FrequencyDomainBodyGyroscopeMeanFrequencyXAxis
+* 	FrequencyDomainBodyGyroscopeMeanFrequencyYAxis
+* 	FrequencyDomainBodyGyroscopeMeanFrequencyZAxis
+* 	FrequencyDomainBodyAccelerationMagnitudeMean
+* 	FrequencyDomainBodyAccelerationMagnitudeStandardDeviation
+* 	FrequencyDomainBodyAccelerationMagnitudeMeanFrequency
+* 	FrequencyDomainBodyBodyAccelerationJerkMagnitudeMean
+* 	FrequencyDomainBodyBodyAccelerationJerkMagnitudeStandardDeviation
+* 	FrequencyDomainBodyBodyAccelerationJerkMagnitudeMeanFrequency
+* 	FrequencyDomainBodyBodyGyroscopeMagnitudeMean
+* 	FrequencyDomainBodyBodyGyroscopeMagnitudeStandardDeviation
+* 	FrequencyDomainBodyBodyGyroscopeMagnitudeMeanFrequency
+* 	FrequencyDomainBodyBodyGyroscopeJerkMagnitudeMean
+* 	FrequencyDomainBodyBodyGyroscopeJerkMagnitudeStandardDeviation
+* 	FrequencyDomainBodyBodyGyroscopeJerkMagnitudeMeanFrequency
 
 
 
