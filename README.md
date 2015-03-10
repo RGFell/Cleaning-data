@@ -10,7 +10,7 @@ This reposistory contains files for the implentation of the Coursera Class [Gett
 The repository contains the following files:-
 
 * **README.md** - This readme file.
-* **CodeBook.md** - The code book explaining the data contained in the raw data set.
+* **CodeBook.md** - The code book explaining the data contained in the data set.
 * **run_analysis.R** - The R script to generate a tidy data set based on the raw data.
 * **tidy.data.txt** - The output of the script. This is a tidy data set with the average of each variable for each activity and each subject.
 
