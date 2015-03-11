@@ -31,6 +31,16 @@ The raw data for this project can be downloaded from https://d396qusza40orc.clou
 
 For information on the contents of the raw data files, review the included [Code Book](https://github.com/dvd940/Cleaning-data/blob/master/CodeBook.md "Code Book"). 
 
+The data should be extracted in its original structure into the project folder. 
+
+```
+└───UCI HAR Dataset
+        ├───test
+        │   └───Inertial Signals
+        └───train
+            └───Inertial Signals
+```
+
 
 ### Unused Data
 
@@ -53,15 +63,9 @@ install.packages('reshape2')
 
 ### Instructions
 1. Download the raw data files from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-2. Unzip the files into the project folder keeping the folder structure as follows.
-```
-└───UCI HAR Dataset
-        ├───test
-        │   └───Inertial Signals
-        └───train
-            └───Inertial Signals
-```
-3. Run the script `run_analysis.R`
+2. Unzip the files into the project folder keeping the folder structure.
+3. Download the file `run_analysis.R` from this repository in the project folder.
+4. Run the script `run_analysis.R`
 
         source('run_analysis.R')
 
@@ -89,7 +93,7 @@ The `run_analysis.R` script performs the following actions:-
 2. Combine the training and test sets into a single dataset using the `cbind` and `rbind` functions. [Assignment step 1]
 3. Keep only the subject.id, activity and any column that contains a mean or standard deviation. **Note:** For mean, any varaible name that is a mean is included. This means that `meanFreq` data is also kept. [Assignment step 2]
 4. The activty values are replaced with descriptive names. [Assignment step 3]
-5. The variable names are changed to descriptive labels. **Note:** Some terms such as 'AccJerk' are not modified. [Assignment step 4]
+5. The variable names are changed to descriptive labels. [Assignment step 4]
 6. The data is melted and recast into a data set showing the average of each variable for each activity and each subject. The data is then outputted to a text file. [Assignement step 5]
 
 ### Descriptive Variable Names
@@ -98,7 +102,7 @@ The outputted file modifies the variable names to make them more descriptive as 
 
 * Names starting with 't' are preceeded by 'TimeDomain'.
 * Names starting with 'f' are preceeded by 'FrequencyDomain'.
-* 'std' is replaced with 'Standard Deviation'.
+* 'std' is replaced with 'StandardDeviation'.
 * 'Acc' is replaced with 'Acceleration'.
 * 'Gyro' is replaced with 'Gyroscope'.
 * 'Mag' is replaced with 'Magnitude'.
